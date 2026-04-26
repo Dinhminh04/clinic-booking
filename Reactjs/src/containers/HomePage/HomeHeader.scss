@@ -1,0 +1,164 @@
+.home-header-container {
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  .home-header-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    // Logo - FIX: bỏ thẻ a, style trực tiếp vào span
+    .header-logo {
+      cursor: pointer;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      flex-shrink: 0;
+
+      .logo-med {
+        color: #45c3d2;
+      }
+      .logo-care {
+        color: #e8a838;
+      }
+    }
+
+    // Nav
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      flex: 1;
+      justify-content: center;
+
+      .nav-item {
+        cursor: pointer;
+        text-align: left;
+        padding: 5px 0;
+        border-bottom: 2px solid transparent;
+        transition: all 0.2s;
+
+        &:hover {
+          border-bottom-color: #45c3d2;
+          span {
+            color: #45c3d2;
+          }
+        }
+
+        span {
+          display: block;
+          font-size: 13px;
+          font-weight: 600;
+          color: #333;
+          line-height: 1.2;
+        }
+
+        p {
+          font-size: 11px;
+          color: #999;
+          margin: 0;
+          line-height: 1.2;
+        }
+      }
+    }
+
+    // Actions
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-shrink: 0;
+
+      .action-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        color: #555;
+        min-width: 45px;
+        transition: color 0.2s;
+
+        &:hover {
+          color: #45c3d2;
+        }
+
+        i {
+          font-size: 18px;
+          margin-bottom: 2px;
+        }
+
+        span {
+          font-size: 11px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    // Hamburger - ẩn trên desktop
+    .hamburger {
+      display: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #45c3d2;
+      padding: 5px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+// Responsive mobile
+@media (max-width: 768px) {
+  .home-header-container {
+    .home-header-content {
+      flex-wrap: wrap;
+      height: auto;
+      padding: 10px 15px;
+      gap: 10px;
+
+      .hamburger {
+        display: block;
+        order: 1;
+      }
+
+      .header-logo {
+        order: 2;
+        flex: 1;
+      }
+
+      .header-actions {
+        order: 3;
+      }
+
+      .header-nav {
+        display: none;
+        order: 4;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        padding: 5px 0 10px;
+
+        &.open {
+          display: flex;
+        }
+
+        .nav-item {
+          padding: 10px 0;
+          border-bottom: 1px solid #f0f0f0;
+          border-right: none;
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.login-background {
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+
+  .login-container {
+    height: 100%;
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: white;
+
+    .login-content {
+      padding: 10px;
+
+      .text-login {
+        text-align: center;
+        font-weight: 600;
+        font-size: 25px;
+        margin-bottom: 10px;
+      }
+
+      .login-input {
+        margin: 7px 0;
+      }
+
+      .btn-login {
+        width: 100%;
+        margin: 10px 0;
+        height: 35px;
+        color: white;
+        border-radius: 15px;
+        outline: none;
+        border: none;
+        background: linear-gradient(
+          135deg,
+          rgba(34, 193, 195, 1) 0%,
+          rgba(253, 187, 45, 1) 100%
+          
+        );
+      }
+      .forgot-password{
+        text-align: center;
+        color: #333;
+        cursor: pointer;
+      }
+      .social-login{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 10px;
+        .google{
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          background-color: #ce2323;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          cursor: pointer;
+        }
+        .facebook{
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          background-color: #0d1883;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

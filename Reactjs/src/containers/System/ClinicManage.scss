@@ -1,0 +1,203 @@
+.clinic-manage {
+
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 12px;
+
+    .btn-add {
+      padding: 7px 16px;
+      background: #0071ba !important;
+      color: white !important;
+      border: none !important;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      &:hover { background: #005a9e !important; }
+    }
+
+    .toolbar-right {
+      .search-input {
+        padding: 6px 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 13px;
+        outline: none;
+        width: 220px;
+        &:focus { border-color: #45c3d2; }
+      }
+    }
+  }
+
+  .modal-form {
+    background: white;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+    .modal-title {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 18px;
+      color: #333;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .required { color: #e53935; }
+
+    label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .form-group { margin-bottom: 14px; }
+
+    .preview-img {
+      margin-top: 10px;
+      height: 80px;
+      objectFit: contain;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      display: block;
+    }
+
+    .modal-actions {
+      margin-top: 20px;
+      padding-top: 14px;
+      border-top: 1px solid #f0f0f0;
+      display: flex;
+      gap: 10px;
+
+      .btn-save {
+        padding: 7px 20px;
+        background: #28a745 !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        &:hover { background: #218838 !important; }
+      }
+
+      .btn-cancel {
+        padding: 7px 20px;
+        background: #f5f5f5 !important;
+        color: #555 !important;
+        border: 1px solid #ddd !important;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        &:hover { background: #e8e8e8 !important; }
+      }
+    }
+  }
+
+  .clinic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+
+    .clinic-card {
+      background: white;
+      border-radius: 8px;
+      padding: 16px;
+      border: 1px solid #e8e8e8;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      transition: box-shadow 0.2s;
+      &:hover { box-shadow: 0 3px 10px rgba(0,0,0,0.08); }
+
+      .card-top {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 12px;
+
+        .clinic-img {
+          width: 60px;
+          height: 60px;
+          object-fit: contain;
+          border-radius: 6px;
+          border: 1px solid #eee;
+          flex-shrink: 0;
+        }
+
+        .card-info {
+          flex: 1;
+
+          .card-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 4px;
+
+            .clinic-name {
+              font-weight: 600;
+              font-size: 14px;
+              color: #333;
+              margin: 0;
+            }
+
+            .badge-active {
+              background: #e8f5e9;
+              color: #2e7d32;
+              padding: 2px 8px;
+              border-radius: 10px;
+              font-size: 11px;
+              font-weight: 500;
+              white-space: nowrap;
+            }
+          }
+
+          .clinic-address {
+            color: #666;
+            font-size: 13px;
+            margin: 0 0 3px;
+          }
+
+          .clinic-desc {
+            color: #999;
+            font-size: 12px;
+            margin: 0;
+          }
+        }
+      }
+
+      .card-actions {
+        border-top: 1px solid #f0f0f0;
+        padding-top: 10px;
+
+        .btn-edit {
+          color: #0071ba;
+          cursor: pointer;
+          margin-right: 14px;
+          font-size: 13px;
+          &:hover { text-decoration: underline; }
+        }
+
+        .btn-delete {
+          color: #d01a1d;
+          cursor: pointer;
+          font-size: 13px;
+          &:hover { text-decoration: underline; }
+        }
+      }
+    }
+
+    .empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 30px;
+      color: #aaa;
+    }
+  }
+}

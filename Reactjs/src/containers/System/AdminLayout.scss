@@ -1,0 +1,146 @@
+.admin-layout {
+    display: flex;
+    height: 100vh;
+    font-family: 'Helvetica', sans-serif;
+
+    .sidebar {
+        width: 220px;
+        min-width: 220px;
+        background-color: #fff;
+        border-right: 1px solid #e0e0e0;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+
+        .sidebar-header {
+            padding: 20px 15px;
+            background-color: #0071ba;
+            .logo-text {
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+
+        .sidebar-menu {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px 0;
+
+            .menu-section {
+                margin-bottom: 10px;
+                .menu-section-title {
+                    font-size: 11px;
+                    color: #999;
+                    font-weight: 600;
+                    padding: 8px 15px 4px;
+                    display: block;
+                    letter-spacing: 1px;
+                }
+                .menu-item {
+                    display: flex;
+                    align-items: center;
+                    padding: 10px 15px;
+                    color: #444;
+                    text-decoration: none;
+                    font-size: 14px;
+                    transition: all 0.2s;
+                    border-left: 3px solid transparent;
+
+                    i {
+                        width: 20px;
+                        margin-right: 10px;
+                        color: #888;
+                    }
+
+                    &:hover {
+                        background-color: #f0f7ff;
+                        color: #0071ba;
+                        i { color: #0071ba; }
+                    }
+
+                    &.active {
+                        background-color: #e8f4ff;
+                        color: #0071ba;
+                        border-left: 3px solid #0071ba;
+                        font-weight: 600;
+                        i { color: #0071ba; }
+                    }
+                }
+            }
+        }
+
+        .sidebar-footer {
+            padding: 12px 15px;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .admin-info {
+                display: flex;
+                align-items: center;
+                .admin-avatar {
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    background-color: #0071ba;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 12px;
+                    font-weight: bold;
+                    margin-right: 8px;
+                }
+                .admin-detail {
+                    display: flex;
+                    flex-direction: column;
+                    .admin-name {
+                        font-size: 13px;
+                        font-weight: 600;
+                        color: #333;
+                    }
+                    .admin-role {
+                        font-size: 11px;
+                        color: #888;
+                    }
+                }
+            }
+
+            .btn-logout {
+                background: none;
+                border: none;
+                color: #888;
+                cursor: pointer;
+                font-size: 16px;
+                &:hover { color: #d01a1d; }
+            }
+        }
+    }
+
+    .main-content {
+        flex: 1;
+        background-color: #f5f7fa;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        .top-bar {
+            background-color: #fff;
+            padding: 12px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .content-area {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+    }
+}
