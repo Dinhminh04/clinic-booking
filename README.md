@@ -43,7 +43,7 @@ Patients can browse clinics, specialties and doctors, open a doctor's detail pag
 
 | Layer | Technology |
 |---|---|
-| Frontend | React 17, Redux (redux-thunk, redux-persist), React Router, Bootstrap 5, Sass, react-intl |
+| Frontend | React 17, Redux , React Router, Bootstrap 5, react-intl |
 | Backend | Node.js, Express, Sequelize ORM, bcrypt |
 | Database | MySQL / MariaDB |
 
